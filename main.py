@@ -3,7 +3,7 @@ debug = True
 password = None
 # set two variables for the main function
 
-
+# this is the change I make for the rubric
 def encode(password):
     encoded_password = ""
     for digit in password:
