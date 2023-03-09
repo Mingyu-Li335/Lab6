@@ -11,6 +11,14 @@ def encode(password):
         encoded_password += encoded_digit
     return encoded_password
 
+def decode(password):
+    output = ""
+
+    for x in password:
+        output += str(int(x) - 3)
+
+    return output
+
 
 while debug:
     # print the menu
@@ -23,10 +31,12 @@ while debug:
     if option == 1:
         password = input('Please enter your password to encode:')
         print('Your password has been encoded and stored! ')
+        password = encode(password)
     elif option == 2:
         print('The encoded password is', end=' ')
         # plug in the encoder function
-        print(encode(password), end='')
+        print(password, end='')
+        password = decode(password)
         print(f', and the original password is {password}')
     elif option == 3:
         debug = False
