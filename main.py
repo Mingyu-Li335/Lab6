@@ -35,8 +35,10 @@ while debug:
     elif option == 2:
         print('The encoded password is', end=' ')
         # plug in the encoder function
+# wrong code deleted
         print(password, end='')
         password = decode(password)
         print(f', and the original password is {password}')
     elif option == 3:
         debug = False
+
